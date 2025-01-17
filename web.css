@@ -1,11 +1,19 @@
 body{
-    background-color:rgb(47,60,89)
+    background-color:rgb(47,60,89);
+    text-align: center;
 }
 
-.quicksand-h1 {
+#time {
     font-family: "Quicksand", serif;
     font-optical-sizing: auto;
-    /* font-weight: <weight>;
-    font-style: normal; */
-  }
+    font-size: 80px;
+    color: #cdcdcd;
+}
   
+
+#date {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-size: 40px;
+    color: #cdcdcd;
+}
