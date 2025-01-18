@@ -1,0 +1,121 @@
+body{
+    font-family: "Quicksand", serif;
+    background-color:rgb(47,60,89);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-width: 600px;
+}
+
+#banner {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(34, 43, 62);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between; /* 將元素分配到兩端 */
+    align-items: center; /* 使文字垂直居中 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* 使橫幅層級高於其他元素 */
+}
+
+#title{
+    margin-left: 10px;
+}
+.btn{
+    background-color: rgb(86, 117, 138);
+    color:black;
+    border:0;
+    margin-right: 10px;
+    height: 32px;
+    border-radius:5px;
+    transition: background-color 0.3s ease;
+    font-family: "Quicksand", Bold ;
+}
+.btn:hover{
+    background-color: rgb(93, 138, 168);
+}
+
+#introduce {
+    display: flex;              /* 使用 Flexbox */
+    flex-direction: row;        /* 設定為水平方向排列 */
+    align-items: flex-start;    /* 水平對齊到容器的上方 */    justify-content: center;    /* 子元素水平居中 */
+    /* align-items: center;        子元素垂直居中 */
+    margin-top: 100px;          /* 與頂部保持距離，避免被橫幅遮住 */
+    gap: 20px;                  /* 圖片和文字之間的間距 */
+}
+
+
+#picture{
+    /* margin-top: 70px; */
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000; /* 黑色邊框，寬度 5px */
+    border-radius: 10px;    /* 邊角圓潤，半徑 10px */
+    padding: 3px;           /* 圖片內邊距 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* 陰影效果 */
+}
+
+#txt{
+    display: flex;
+    flex-direction: column;     /* 讓文字部分上下排列 */
+    align-items: flex-start;    /* 左對齊文字 */
+    gap: 10px;   
+    text-align: left;    
+}
+
+#txt_style {
+    font-optical-sizing: auto;
+    font-size: 20px;
+    color: #cdcdcd;
+    /* margin-top: 50px; */
+    /* padding: 3px; */
+    border-radius: 20px;
+    /* padding: 5px;     */
+    /* max-width: 700px; */
+    width: 100%;   
+}
+
+.box{
+    font-optical-sizing: auto;
+    font-size: 20px;
+    color: #cdcdcd;
+    border: 4px solid rgb(31, 40, 59);; /* 黑色邊框，寬度 5px */
+    border-radius: 20px;
+    padding: 3px;    
+    max-width: 700px;
+    width: 90%;   
+    margin-bottom: 5px;
+}
+
+#bar {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#web-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 30px;
+    border: 4px solid rgb(31, 40, 59);
+    border-radius: 20px;
+    padding: 5px;
+    max-width: 350px;
+}
+
+h2{
+    margin-top: 5px;
+    margin-bottom: 0;
+}

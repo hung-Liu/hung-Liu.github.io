@@ -11,6 +11,6 @@ setInterval(() => {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
-    $("#time").text(hours+':'+minutes+':'+seconds)
+    $("#time").text(hours+':'+(minutes<10?'0'+minutes:minutes)+':'+(seconds<10?'0'+seconds:seconds))
     $("#date").text(months[month]+' '+day+' '+year)
 }, 100);
