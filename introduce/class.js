@@ -1,4 +1,3 @@
-alert('import JS')
 const buttons = [
     { id: 'atcoder', url: 'https://atcoder.jp/users/hung100' },
     { id: 'codeforce', url: 'https://codeforces.com/profile/hung100' },
