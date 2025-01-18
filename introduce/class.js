@@ -1,3 +1,4 @@
+alert('import JS')
 const buttons = [
     { id: 'atcoder', url: 'https://atcoder.jp/users/hung100' },
     { id: 'codeforce', url: 'https://codeforces.com/profile/hung100' },
@@ -19,6 +20,5 @@ document.getElementById('title').addEventListener('click', () => {
 
 document.getElementById('about').addEventListener('click', () => {
     window.location.href = 'https://hung-liu.github.io/introduce';
-    alert('ok')
 });
 
