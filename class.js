@@ -17,11 +17,11 @@ setInterval(() => {
 
 
 
-// document.getElementById('title').addEventListener('click', () => {
-//     window.location.href = 'https://hung-liu.github.io/';
-// });
+document.getElementById('title').addEventListener('click', () => {
+    window.location.href = 'https://hung-liu.github.io/';
+});
 
-// document.getElementById('about').addEventListener('click', () => {
-//     window.location.href = 'https://hung-liu.github.io/introduce';
-// });
+document.getElementById('about').addEventListener('click', () => {
+    window.location.href = 'https://hung-liu.github.io/introduce';
+});
 

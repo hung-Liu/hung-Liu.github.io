@@ -19,5 +19,6 @@ document.getElementById('title').addEventListener('click', () => {
 
 document.getElementById('about').addEventListener('click', () => {
     window.location.href = 'https://hung-liu.github.io/introduce';
+    alert('ok')
 });
 
