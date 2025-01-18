@@ -1,6 +1,5 @@
 body{
-    font-family: "Quicksand", serif;
-    font-family: "Noto Sans TC", serif;
+    font-family: "Quicksand", "Noto Sans TC", serif;
     background-color:rgb(47,60,89);
     text-align: center;
     margin: 0;
@@ -27,6 +26,7 @@ body{
     margin-left: 10px;
 }
 .btn{
+    font-family: "Quicksand", "Noto Sans TC", serif;
     background-color: rgb(86, 117, 138);
     color:black;
     border:0;
@@ -39,16 +39,6 @@ body{
 .btn:hover{
     background-color: rgb(93, 138, 168);
 }
-
-#introduce {
-    display: flex;              /* 使用 Flexbox */
-    flex-direction: row;        /* 設定為水平方向排列 */
-    align-items: flex-start;    /* 水平對齊到容器的上方 */    justify-content: center;    /* 子元素水平居中 */
-    /* align-items: center;        子元素垂直居中 */
-    margin-top: 100px;          /* 與頂部保持距離，避免被橫幅遮住 */
-    gap: 20px;                  /* 圖片和文字之間的間距 */
-}
-
 
 #picture{
     /* margin-top: 70px; */
@@ -71,6 +61,7 @@ body{
 }
 
 #txt_style {
+    font-family: "Quicksand", "Noto Sans TC", serif;
     font-optical-sizing: auto;
     font-size: 20px;
     color: #cdcdcd;

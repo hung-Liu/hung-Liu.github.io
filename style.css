@@ -41,6 +41,7 @@ body{
 }
 
 .btn{
+    font-family: "Quicksand", "Noto Sans TC", serif;
     background-color: rgb(86, 117, 138);
     color:black;
     border:0;
