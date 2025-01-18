@@ -1,6 +1,5 @@
 body{
-    font-family: "Quicksand", serif;
-    font-family: "Noto Sans TC", serif;    
+    font-family: "Quicksand", "Noto Sans TC", serif; 
     background-color:rgb(47,60,89);
     text-align: center;
     margin: 0;
