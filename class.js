@@ -14,3 +14,14 @@ setInterval(() => {
     $("#time").text(hours+':'+(minutes<10?'0'+minutes:minutes)+':'+(seconds<10?'0'+seconds:seconds))
     $("#date").text(months[month]+' '+day+' '+year)
 }, 100);
+
+
+
+document.getElementById('title').addEventListener('click', () => {
+    window.location.href = 'https://hung-liu.github.io/';
+});
+
+document.getElementById('about').addEventListener('click', () => {
+    window.location.href = 'https://hung-liu.github.io/introduce';
+});
+
