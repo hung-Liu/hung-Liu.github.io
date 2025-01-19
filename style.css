@@ -15,6 +15,7 @@ body{
   
 
 #date {
+    cursor: pointer;
     font-optical-sizing: auto;
     font-size: 40px;
     color: #cdcdcd;
@@ -37,6 +38,7 @@ body{
 
 #title{
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .btn{

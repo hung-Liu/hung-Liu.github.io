@@ -93,7 +93,6 @@ $('#other').click(function() {
 
 
 $(document).ready(function() {
-    // 动态生成项目列表
     $('#project-list').empty();
     for (var i = 0; i < n; i++) {
         var box_html = `
@@ -104,7 +103,6 @@ $(document).ready(function() {
         $('#project-list').append(box_html);
     }
 
-    // 使用事件代理绑定点击事件
     $('#project-list').on('click', '.project-box', function() {
         var ID = $(this).find('.project-title').attr('id');
         // console.log(ID);
