@@ -22,7 +22,7 @@ function show(type){
 
 var n,id_,type_,name_;
 
-fetch('allproject.json').then(response => {return response.json();}).then(data => {
+fetch('all_project.json').then(response => {return response.json();}).then(data => {
     n = data["id_"].length
     id_ = data["id_"]
     type_ = data["type_"]
@@ -48,20 +48,3 @@ $(document).ready(function() {
     });
 });
 
-`
-<div class = project-box>
-<p class = project-title>scratch 1</p>
-</div>
-<div class = project-box>
-<p class = project-title>unity 1</p>
-</div>
-<div class = project-box>
-<p class = project-title>project 2</p>
-</div>
-<div class = project-box>
-<p class = project-title>project 3</p>
-</div>
-<div class = project-box>
-<p class = project-title>project 4</p>
-            </div>
-            `
