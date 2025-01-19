@@ -28,12 +28,12 @@ body{
     color: white;
     font-size: 20px;
     display: flex;
-    justify-content: space-between; /* 將元素分配到兩端 */
-    align-items: center; /* 使文字垂直居中 */
+    justify-content: space-between;
+    align-items: center; 
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* 使橫幅層級高於其他元素 */
+    z-index: 1000;
 }
 
 #title{
