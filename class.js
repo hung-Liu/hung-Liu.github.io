@@ -16,12 +16,12 @@ setInterval(() => {
 }, 100);
 
 
-
-document.getElementById('title').addEventListener('click', () => {
+$('#title').click(function() {
     window.location.href = 'https://hung-liu.github.io/';
 });
-
-document.getElementById('about').addEventListener('click', () => {
+$('#about').click(function() {
     window.location.href = 'https://hung-liu.github.io/introduce';
 });
-
+$('#project').click(function() {
+    window.location.href = 'https://hung-liu.github.io/project';
+});

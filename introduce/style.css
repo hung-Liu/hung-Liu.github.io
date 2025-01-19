@@ -68,21 +68,17 @@ body{
     flex-direction: column;     /* 讓文字部分上下排列 */
     align-items: flex-start;    /* 左對齊文字 */
     gap: 10px;   
-    text-align: left;    
+    text-align: left;
 }
 
-#txt_style {
+.txt_style {
     font-family: "Quicksand", "Noto Sans TC", serif;
     font-optical-sizing: auto;
     font-size: 20px;
     color: #cdcdcd;
-    /* margin-top: 50px; */
-    /* padding: 3px; */
     border-radius: 20px;
-    /* padding: 5px;     */
-    /* max-width: 700px; */
-    width: 100%;   
-}
+    width: 100%;
+} 
 
 .box{
     font-optical-sizing: auto;
@@ -120,5 +116,16 @@ body{
 
 h2{
     margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.year{
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+
+.exp{
+    margin-top: 10px;
     margin-bottom: 0;
 }

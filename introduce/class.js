@@ -12,13 +12,12 @@ buttons.forEach(button => {
         window.open(button.url, '_blank');
     });
 });
-
-document.getElementById('title').addEventListener('click', () => {
+$('#title').click(function() {
     window.location.href = 'https://hung-liu.github.io/';
 });
-
-document.getElementById('about').addEventListener('click', () => {
-    console.log('???')
+$('#about').click(function() {
     window.location.href = 'https://hung-liu.github.io/introduce';
 });
-
+$('#project').click(function() {
+    window.location.href = 'https://hung-liu.github.io/project';
+});
