@@ -21,7 +21,7 @@ function show(){
 function err(re){
     $('#project_name').text("歐不!");
     if(re=='no file')$('#description').text("你好像走錯地方囉~");
-    if(re=='not find')$('#description').text("好像沒有這個作品");
+    if(re=='not find')$('#description').text("好像沒有這個作品 或是我還沒做好欸QQ");
     $('#date').hide();
 }
 

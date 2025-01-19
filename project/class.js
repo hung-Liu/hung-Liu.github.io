@@ -13,7 +13,7 @@ function show(type){
     for (var i = 0; i < n; i++) {
         var box_html = `
         <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
+            <p class="project-title" id="${id_[i]}" name = "${name_[i]}">${name_[i]}</p>
         </div>
         `;
         if(type=='all'||type==type_[i])$('#project-list').append(box_html);
@@ -41,9 +41,10 @@ $('#other').click(function() {show('other')});
 $(document).ready(function() {
     $('#project-list').on('click', '.project-box', function() {
         var ID = $(this).find('.project-title').attr('id');
+        var project_name = $(this).find('.project-title').attr('name');
         // console.log(ID);
-        if(ID=="unity-1")window.location.href = "https://peter-master.github.io/tempo/";
-        else alert("還沒做好欸QQ")
+        console.log(project_name)
+        window.location.href = "https://peter-master.github.io/tempo/showproject?project="+project_name;
     });
 });
 
