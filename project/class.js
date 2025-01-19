@@ -8,32 +8,7 @@ $('#project').click(function() {
     window.location.href = 'https://hung-liu.github.io/project';
 });
 
-var n = 3;
-var id_ = ["scratch-1","unity-1","project-1"]
-var type_ = ["scratch","unity","other"]
-var name_ = ["sort","tempo","empty"]
-
-// $(document).ready(function() {
-//     $('.project-box').on('click', function() {
-//         const pId = $(this).find('p').attr('id');
-//         console.log(pId);
-//         if(pId=='unity-1')window.location.href = 'https://peter-master.github.io/tempo/';
-//     });
-// });
-
-// $(document).ready(function() {
-//     $('#project-list').empty();
-//     for (var i = 0; i < n; i++) {
-//         var box_html = `
-//         <div class="project-box">
-//             <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-//         </div>
-//         `;
-//         $('#project-list').append(box_html);
-//     }
-// });
-
-$('#all').click(function() {
+function show(type){
     $('#project-list').empty();
     for (var i = 0; i < n; i++) {
         var box_html = `
@@ -41,68 +16,29 @@ $('#all').click(function() {
             <p class="project-title" id="${id_[i]}">${name_[i]}</p>
         </div>
         `;
-        $('#project-list').append(box_html);
+        if(type=='all'||type==type_[i])$('#project-list').append(box_html);
     }
+}
+
+var n,id_,type_,name_;
+
+fetch('allproject.json').then(response => {return response.json();}).then(data => {
+    n = data["id_"].length
+    id_ = data["id_"]
+    type_ = data["type_"]
+    name_ = data["name_"]
+    console.log(data);
+    console.log('loaded!');
+    show('all')
 });
 
-$('#scratch').click(function() {
-    $('#project-list').empty();
-    for (var i = 0; i < n; i++) {
-        var box_html = `
-        <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-        </div>
-        `;
-        if(type_[i]=="scratch")$('#project-list').append(box_html);
-    }
-});
-$('#scratch').click(function() {
-    $('#project-list').empty();
-    for (var i = 0; i < n; i++) {
-        var box_html = `
-        <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-        </div>
-        `;
-        if(type_[i]=="scratch")$('#project-list').append(box_html);
-    }
-});
-$('#unity').click(function() {
-    $('#project-list').empty();
-    for (var i = 0; i < n; i++) {
-        var box_html = `
-        <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-        </div>
-        `;
-        if(type_[i]=="unity")$('#project-list').append(box_html);
-    }
-});
-
-$('#other').click(function() {
-    $('#project-list').empty();
-    for (var i = 0; i < n; i++) {
-        var box_html = `
-        <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-        </div>
-        `;
-        if(type_[i]=="other")$('#project-list').append(box_html);
-    }
-});
+$('#all').click(function() {show('all')});
+$('#scratch').click(function() {show('scratch')});
+$('#unity').click(function() {show('unity')});
+$('#other').click(function() {show('other')});
 
 
 $(document).ready(function() {
-    $('#project-list').empty();
-    for (var i = 0; i < n; i++) {
-        var box_html = `
-        <div class="project-box">
-            <p class="project-title" id="${id_[i]}">${name_[i]}</p>
-        </div>
-        `;
-        $('#project-list').append(box_html);
-    }
-
     $('#project-list').on('click', '.project-box', function() {
         var ID = $(this).find('.project-title').attr('id');
         // console.log(ID);
