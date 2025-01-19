@@ -44,7 +44,7 @@ $(document).ready(function() {
         var project_name = $(this).find('.project-title').attr('name');
         // console.log(ID);
         console.log(project_name)
-        window.location.href = "https://peter-master.github.io/tempo/showproject?project="+project_name;
+        window.location.href = "https://hung-liu.github.io/project/showproject?project="+project_name;
     });
 });
 
