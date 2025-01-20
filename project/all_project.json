@@ -1,5 +1,5 @@
 {
-    "id_":["scratch-1","unity-1","project-1"],
-    "type_": ["scratch","unity","other"],
-    "name_" : ["sort","tempo","empty"]
+    "id_":["scratch-1","unity-1"],
+    "type_": ["scratch","unity"],
+    "name_" : ["sort","tempo"]
 }
