@@ -65,7 +65,7 @@ h1{
     width: 100%;
 } 
 
-#date{
+#date,#author{
     font-size: 18px;
     text-align: right;
 }

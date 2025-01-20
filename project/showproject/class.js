@@ -15,6 +15,7 @@ function show(){
     $('#project_name').text(name_);
     $('#description').text(description);
     $('#date').text(date);
+    $('#author').text(author);
     $('#date').show();
 }
 
