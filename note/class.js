@@ -17,7 +17,7 @@ function show(article){
 }
 
 function add_note(title, date){
-    console.log(title);
+    // console.log(title);
     var pushHTML = `
     <div class = box>
     <h2 class="note_txt">
@@ -35,6 +35,7 @@ function cntpage(){
     mxpage = Math.floor(n/show_max);
     if(n%show_max)mxpage++;
     console.log(mxpage)
+    console.log("("+(show_max*page).toString()+","+(show_max*(page+1)).toString()+"]");
     for (let key in article) {
         cnt++;
         if(show_max*page<cnt&&cnt<=show_max*(page+1))
@@ -65,8 +66,9 @@ var article,title,txt;
 
 const params = new URLSearchParams(window.location.search);
 const note = params.get('note');
-const page = params.get('page');
-if(!page) 
+var page = params.get('page');
+if(!page) page = 0;
+page = Number(page);
 console.log("ID: "+note)
 
 fetch('./notes/article.json').then(response => {
