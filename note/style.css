@@ -47,7 +47,7 @@ h1{
     color: #cdcdcd;
 }
 
-#project-box {
+#note-box {
     gap: 20px;
     max-width: 700px;
     margin: 20px auto; 
@@ -65,12 +65,34 @@ h1{
     width: 100%;
 } 
 
+.box{
+    margin: 50px;
+    margin-top: 0;
+    background-color: #eae7e7;
+}
+
+h2 {
+    font-family: "Quicksand", "Noto Sans TC", serif;
+    font-optical-sizing: auto;
+    font-size: 22px;
+    color: #848181;
+    border-radius: 20px;
+    width: auto;
+} 
+
+.note_title, .note_date {
+    display: inline; /* 讓 title 和 date 在同一行顯示 */
+}
+
+
 #date,#author{
     font-size: 18px;
     text-align: right;
 }
 
-.game-link {
+
+
+.page-btn {
     display: inline-block;
     padding: 8px 15px;
     background-color: #007bff;
@@ -82,7 +104,7 @@ h1{
     transition: transform 0.2s ease;
 }
 
-.game-link:hover {
+.page-btn:hover {
     transform: scale(1.05);
     /* background-color: #0056b3; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);

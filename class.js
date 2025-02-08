@@ -25,3 +25,6 @@ $('#about').click(function() {
 $('#project').click(function() {
     window.location.href = 'https://hung-liu.github.io/project';
 });
+$('#note').click(function() {
+    window.location.href = 'https://hung-liu.github.io/note';
+});
