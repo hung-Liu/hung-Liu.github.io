@@ -10,17 +10,29 @@ $('#project').click(function() {
 $('#note').click(function() {
     window.location.href = 'https://hung-liu.github.io/note';
 });
+
+
+$(document).ready(function() {
+    $('#push_note').on('click', '.box', function() {
+        var ID = $(this).find('.note_txt').attr('id');
+        console.log("GO"+ID+"!!!!!!!!");
+        window.location.href = 'https://hung-liu.github.io/note?note='+ID;
+    });
+});
+
+
+
 function show(article){
-    $('#project_name').text(article[0]);
+    $('#title_').text(article[0]);
     $('#description').text(article[2]);
     $('#date').text(article[1]);
 }
 
-function add_note(title, date){
+function add_note(title, date,id){
     // console.log(title);
     var pushHTML = `
     <div class = box>
-    <h2 class="note_txt">
+    <h2 class="note_txt" id = ${id}>
     <span class="note_title">${title}</span> >
     <span class="note_date">${date}</span>
     </h2>
@@ -39,7 +51,7 @@ function cntpage(){
     for (let key in article) {
         cnt++;
         if(show_max*page<cnt&&cnt<=show_max*(page+1))
-        add_note(article[key][0], article[key][1]);
+        add_note(article[key][0], article[key][1],key);
     }
 
 }
@@ -79,12 +91,14 @@ fetch('./notes/article.json').then(response => {
     return response.json();
     }).then(data => {
         if (!note) {
+            $(".page-btn").show();
             console.log("首頁")
             $('#project_name').text("筆記");
             article = data;
             cntpage(article)
         } else {
             //載入
+            $(".page-btn").hide();
             article = data[note];
             show(article);
             console.log("loaded");
