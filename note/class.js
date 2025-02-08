@@ -8,15 +8,20 @@ $('#project').click(function() {
     window.location.href = 'https://hung-liu.github.io/project';
 });
 
-function show(){
+function show(article){
+    console.log(article[0]);
+    console.log(article[1]);
+    console.log(article[2]);
     // console.log($('#project_name').text())
-    $('#game_area').empty();
-    $('#game_area').append(game);
-    $('#project_name').text(name_);
-    $('#description').text(description);
-    $('#date').text(date);
-    $('#author').text(author);
-    $('#date').show();
+    // $('#game_area').empty();
+    $('#project_name').text(article[0]);
+    $('#description').text(article[2]);
+    $('#date').text(article[1]);
+    // $('#project_name').text(name_);
+    // $('#description').text(description);
+    // $('#date').text(date);
+    // $('#author').text(author);
+    // $('#date').show();
 }
 
 function err(re){
@@ -30,7 +35,7 @@ var article,title,txt;
 
 const params = new URLSearchParams(window.location.search);
 const note = params.get('note');
-console.log(note)
+console.log("ID: "+note)
 
 if (!note) {
     err("no note");
@@ -39,17 +44,16 @@ if (!note) {
         .then(response => {
             if (!response.ok) {
                 err('not find');
-                throw new Error('File not found or server error'); // 拋出錯誤以中止流程
+                throw new Error('File not found or server error');
             }
             return response.json();
         })
         .then(data => {
             article = data[note];
-            show();
+            show(article);
+            console.log("loaded");
         })
         .catch(error => {
-            console.log('a')
-            // console.error('Error:', error);
             err('not find');
         });
 }
