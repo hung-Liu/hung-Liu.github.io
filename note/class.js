@@ -24,7 +24,7 @@ $(document).ready(function() {
 
 function show(article){
     $('#title_').text(article[0]);
-    $('#description').text(article[2]);
+    $('#description').html(article[2]);
     $('#date').text(article[1]);
 }
 
