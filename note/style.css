@@ -47,15 +47,6 @@ h1{
     color: #cdcdcd;
 }
 
-#note-box {
-    gap: 20px;
-    max-width: 700px;
-    margin: 20px auto; 
-    padding: 10px;
-    border: 4px solid rgb(67, 78, 102);
-    border-radius: 20px;
-}
-
 .txt_style {
     font-family: "Quicksand", "Noto Sans TC", serif;
     font-optical-sizing: auto;
@@ -65,9 +56,18 @@ h1{
     width: 100%;
 } 
 
-.box{
-    margin: 50px;
-    margin-top: 0;
+#note-box {
+    gap: 20px;
+    max-width: 700px;
+    margin: 20px auto; 
+    padding: 10px;
+    border: 4px solid rgb(67, 78, 102);
+    border-radius: 20px;
+}
+.box {
+    margin: 45px auto;
+    width: 70%;
+    /* width: 80%; */
     background-color: #eae7e7;
 }
 
