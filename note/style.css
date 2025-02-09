@@ -61,6 +61,7 @@ h1{
 } 
 
 #note-box {
+    text-align: center;
     gap: 20px;
     max-width: 700px;
     margin: 20px auto; 
@@ -97,7 +98,7 @@ h2 {
 
 
 .page-btn {
-    display: inline-block;
+    display: none;
     padding: 8px 15px;
     background-color: #007bff;
     color: white;
@@ -111,20 +112,12 @@ h2 {
 
 .page-btn:hover {
     transform: scale(1.05);
-    /* background-color: #0056b3; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 code{
     text-align: left;
 }
-
-.hide{
-    /* color: darkgoldenrod; */
-    visibility: hidden;
-    display: hidden;
-}
-
 
 .link-btn {
     display: inline-block;
