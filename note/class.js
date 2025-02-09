@@ -100,7 +100,7 @@ if(!page) page = 0;
 page = Number(page);
 console.log("ID: "+note)
 
-fetch('./notes/article.json').then(response => {
+fetch('./notes/note.json').then(response => {
     if (!response.ok) {
         err('not find');
         throw new Error('File not found or server error');
