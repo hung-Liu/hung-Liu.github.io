@@ -26,8 +26,25 @@ function show(article){
     $('#title_').text(article[0]);
     $('#description').html(article[2]);
     $('#date').text(article[1]);
+    if(article.length>3){
+        fetch('./notes/code/'+article[3]).then(response => {
+            if (!response.ok) {
+                err('not find');
+                throw new Error('File not found or server error');
+            }
+            return response.text();
+        }).then(data => {
+            // console.log(data);
+            // code = data;
+            $("#push_code").append(`<pre><code class="cpp" id = cpp_code></code></pre>`)
+            $("#cpp_code").append(escapeHtml(data));
+            hljs.highlightAll();
+        }).catch(error => {
+                err('not find');
+        });
+    }
 }
-
+            
 function add_note(title, date,id){
     // console.log(title);
     var pushHTML = `
@@ -52,7 +69,7 @@ function cntpage(){
         cnt++;
         if(show_max*page<cnt&&cnt<=show_max*(page+1))
         add_note(article[key][0], article[key][1],key);
-    }
+}
 
 }
 $('#btn_0').click(function() {
@@ -106,3 +123,17 @@ fetch('./notes/article.json').then(response => {
     }).catch(error => {
         err('not find');
     });
+    
+
+    function escapeHtml(str) {
+        return str.replace(/[&<>"']/g, function (match) {
+            const escape = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;',
+            };
+            return escape[match];
+        });
+    }      

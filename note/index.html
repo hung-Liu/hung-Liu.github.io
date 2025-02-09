@@ -9,6 +9,9 @@
          <!--引入css-->
         <link rel = 'stylesheet' href = 'style.css'>
 
+        <link rel="stylesheet" href='notes/code/highlight/styles/default.css'>
+        <script src="notes/code/highlight/highlight.min.js"></script>
+
         <!--引入jquery-->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
@@ -25,7 +28,10 @@
         <div class = box, id = note-box>
             <div id = push_note></div>
             <p class = txt_style id = description></p>
+            <pre id = push_code></pre>
             <p class = txt_style id = date></p>
+        </div>
+        <div class="hide">    
             <button class = page-btn id = 'btn_0'>&#60;&#60;</button>
             <button class = page-btn id = 'btn_back'>&#60;</button>
             <button class = page-btn id = 'btn_front'>&#62;</button>
