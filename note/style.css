@@ -75,6 +75,7 @@ h1{
     width: 70%;
     /* width: 80%; */
     background-color: #eae7e7;
+    cursor: pointer;
 }
 
 h2 {
