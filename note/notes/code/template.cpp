@@ -23,7 +23,7 @@ signed main(){
     int T = 1;
     //cin>>T;
     for(int i = 0; i<T; i++){
-        //cout<<"Case #<<i+1<<'\n';
+        //cout<<"Case #"<<i+1<<'\n';
         solve();
     }
     return 0;
