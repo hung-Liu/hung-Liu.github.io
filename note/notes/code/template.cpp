@@ -13,8 +13,8 @@ using namespace std;
 #define hoshino ios::sync_with_stdio(0)
 #define orz cin.tie(0)
 #define osz cout.tie(0)
-#define INF 1e9
-#define MOD 1e9+7
+const int INF = 1e9;
+const int MOD = 1e9+7;
 
 inline void solve(){
     
