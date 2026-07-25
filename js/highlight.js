@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const copyBtn = document.createElement('button');
     copyBtn.className = 'code-copy-btn';
-    copyBtn.textContent = '复制';
+    copyBtn.textContent = '複製';
     meta.appendChild(copyBtn);
 
     toolbar.appendChild(meta);
@@ -50,18 +50,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       navigator.clipboard.writeText(codeText).then(
         function () {
-          copyBtn.textContent = '已复制!';
+          copyBtn.textContent = '已複製!';
           copyBtn.classList.add('copied');
           setTimeout(function () {
-            copyBtn.textContent = '复制';
+            copyBtn.textContent = '複製';
             copyBtn.classList.remove('copied');
           }, 2000);
         },
         function (err) {
           console.error('Copy failed: ', err);
-          copyBtn.textContent = '复制失败';
+          copyBtn.textContent = '複製失敗';
           setTimeout(function () {
-            copyBtn.textContent = '复制';
+            copyBtn.textContent = '複製';
           }, 2000);
         }
       );
