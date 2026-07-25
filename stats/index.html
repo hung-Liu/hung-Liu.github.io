@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 字体 (霞鹜文楷 LXGW WenKai Webfont) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <!-- activeTitle -->
+  
+  <!-- inactiveTitle -->
+  
+
+  <title>( =ω= )</title>
+  <!-- 注入配置到全局变量 -->
+  <script>
+    window.SITE_CONFIG = {
+      root: '/',
+      activeTitle: '( =ω= )',
+      inactiveTitle: 'ERR',
+      gsap: {"enable":true,"entrance_stagger":0.08,"scroll_trigger":true,"parallax":true,"hover_effect":true}
+    };
+  </script>
+
+  <!-- 引入 GSAP 核心库及 ScrollTrigger 插件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- 加载JS文件 -->
+  
+<script src="/js/head.js"></script>
+<script src="/js/iconfont.js"></script>
+<script src="/js/header.js"></script>
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+  <body class="">
+    <div id="swiper-container">
+  <img
+    src="/images/swiper.jpg"
+    alt="轮播图" />
+  <div class="shadow"></div>
+</div>
+
+    <div class="body-page-view"><!-- 头部 -->
+<div id="header-container" class="header-top">
+  <div class="logo">
+    <a href="/">
+       hung&#39;s競程紀錄 
+    </a>
+  </div>
+
+  <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+  </button>
+
+  <nav class="nav-menu">
+    <ul class="nav-list">
+       
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/posts">Posts</a>
+      </li>
+      
+      <li>
+        <a href="/stats">Stats</a>
+      </li>
+      
+      <li>
+        <a href="/about">About</a>
+      </li>
+       
+    </ul>
+  </nav>
+</div>
+
+
+<!-- D3.js & D3-Sankey plugin CDNs -->
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12"></script>
+
+<!-- Serialize Hexo Posts data for the client side D3 visualization -->
+<script id="posts-data" type="application/json">
+  [{"title":"2026 TOI 初選","path":"/2026/07/26/2026-TOI-%E5%88%9D%E9%81%B8/","date":"2026-07-26","year":"2026","categories":["CP"],"tags":["contest","TOI"]},{"title":"IOIC 2026 心得文","path":"/2026/07/26/IOIC-2026-%E5%BF%83%E5%BE%97%E6%96%87/","date":"2026-07-26","year":"2026","categories":["CP"],"tags":["camp"]},{"title":"my template","path":"/2026/07/26/my-template/","date":"2026-07-26","year":"2026","categories":["CP"],"tags":["code"]},{"title":"self introduction","path":"/2026/07/26/my-first-post/","date":"2026-07-26","year":"2026","categories":["Hello world"],"tags":["我輸光","菜"]},{"title":"YoruKumo 主题介绍","path":"/2024/01/01/hello-world/","date":"2024-01-01","year":"2024","categories":["主题介绍"],"tags":["YoruKumo"]}]
+</script>
+
+<!-- Serialize taxonomies URLs for navigation -->
+<script id="taxonomies-data" type="application/json">
+  {
+    "categories": {"CP":"/categories/CP/","Hello world":"/categories/Hello-world/","主题介绍":"/categories/%E4%B8%BB%E9%A2%98%E4%BB%8B%E7%BB%8D/"},
+    "tags": {"camp":"/tags/camp/","contest":"/tags/contest/","TOI":"/tags/TOI/","我輸光":"/tags/%E6%88%91%E8%BC%B8%E5%85%89/","菜":"/tags/%E8%8F%9C/","YoruKumo":"/tags/YoruKumo/","code":"/tags/code/"},
+    "yearBase": "/archives/"
+  }
+</script>
+
+<script>
+  window.sankeyI18n = {
+    all: "All",
+    yearCategory: "Year",
+    categoryTag: "Category",
+    tip: "Tip: Click on a year, category, or tag to view its archive page",
+    loading: "Loading chart...",
+    articlesList: "Articles",
+    articlesCount: "%s posts",
+    noArticles: "No article data available",
+    noChartData: "No chart data available",
+    layoutError: "Failed to calculate chart layout",
+    flowPath: "Flow Path",
+    relatedArticles: "related articles",
+    archiveYear: "Archive Year",
+    articleCategory: "Article Category",
+    tagCategory: "Tag Category",
+    containsArticles: "Contains articles: ",
+    clickHint: "Click to view the corresponding archive"
+  };
+</script>
+
+<div class="tag-index-page page-content">
+  <div class="sankey-archive-container">
+    <!-- 控制栏 -->
+    <div class="sankey-controls">
+      <div class="sankey-tabs">
+        <button class="sankey-tab active" data-view="all">All</button>
+        <button class="sankey-tab" data-view="year-category">Year</button>
+        <button class="sankey-tab" data-view="category-tag">Category</button>
+      </div>
+    </div>
+
+    <!-- 桑基图卡片 (仅在年份-分类或分类-标签下显示) -->
+    <div class="sankey-chart-card" id="sankey-chart-card" style="display: none;">
+      <div id="sankey-chart">
+        <div class="sankey-loader">
+          <i class="fas fa-spinner fa-spin"></i> Loading chart...
+        </div>
+      </div>
+    </div>
+
+    <!-- 全部文章列表 (仅在“全部”标签下显示) -->
+    <div class="sankey-articles-section" id="sankey-articles-section">
+      <h3 class="articles-section-title">
+        <span class="title-text">Articles</span>
+        <span class="articles-count-badge" id="sankey-articles-count">0 posts</span>
+      </h3>
+      <div class="sankey-articles-list" id="sankey-articles-list">
+        <!-- 由 JavaScript 动态渲染 -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 引入桑基图控制脚本 -->
+
+<script src="/js/tag-sankey.js"></script>
+
+</div>
+    <footer class="footer-container">
+  <div class="footer-content">
+    <p class="footer-text">
+      © 2026
+      <a href="https://github.com/AsukaCC" target="_blank">hung owo</a>.
+      All Rights Reserved.
+    </p>
+    <p class="footer-text">
+      Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme by 
+      <a href="https://github.com/asukacc/YoruKumo" target="_blank">YoruKumo</a>
+    </p>
+    <p class="footer-text">
+      <span>Running for</span>
+      <span id="runtime" class="runtime-badge"></span>
+    </p>
+  </div>
+</footer>
+
+<script>
+  function calculateRuntime() {
+    // 网站开始运行的时间，格式：年-月-日
+    const startTime = new Date('Sat Jul 25 2026 08:00:00 GMT+0800 (台北標準時間)');
+    const currentTime = new Date();
+
+    const timeDiff = currentTime - startTime;
+    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    const dayStr = ' days ';
+    const hourStr = ' hours ';
+    const minuteStr = ' minutes ';
+    const secondStr = ' seconds';
+
+    document.getElementById(
+      'runtime'
+    ).innerHTML = `${days}${dayStr}${hours}${hourStr}${minutes}${minuteStr}${seconds}${secondStr}`;
+  }
+
+  // 初始运行
+  calculateRuntime();
+  // 每秒更新一次
+  setInterval(calculateRuntime, 1000);
+</script>
+
+
+    <div class="to-top">
+  <svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-arrowup"></use>
+  </svg>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toTop = document.querySelector('.to-top');
+    if (!toTop) return;
+
+    const hasGsap = typeof gsap !== 'undefined';
+
+    if (hasGsap) {
+      // 初始隐藏状态
+      gsap.set(toTop, { opacity: 0, scale: 0.6, display: 'none' });
+      
+      let isVisible = false;
+
+      window.addEventListener('scroll', function () {
+        const shouldShow = window.scrollY > window.innerHeight;
+        
+        if (shouldShow && !isVisible) {
+          isVisible = true;
+          gsap.killTweensOf(toTop);
+          gsap.set(toTop, { display: 'flex' });
+          gsap.to(toTop, {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: 'back.out(1.7)'
+          });
+        } else if (!shouldShow && isVisible) {
+          isVisible = false;
+          gsap.killTweensOf(toTop);
+          gsap.to(toTop, {
+            opacity: 0,
+            scale: 0.6,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: () => {
+              if (!isVisible) gsap.set(toTop, { display: 'none' });
+            }
+          });
+        }
+      });
+
+      // Hover 交互与磁性效果在 animation.js 中全局托管
+    } else {
+      // 优雅降级：传统滚动监听
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > window.innerHeight) {
+          toTop.style.display = 'flex';
+        } else {
+          toTop.style.display = 'none';
+        }
+      });
+    }
+
+    // 点击事件
+    toTop.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+  });
+</script>
+
+    
+<script src="/js/animation.js"></script>
+<script src="/js/highlight.js"></script>
+<script src="/js/image-viewer.js"></script>
+
+  </body>
+</html>
