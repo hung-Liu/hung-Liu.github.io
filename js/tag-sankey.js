@@ -271,10 +271,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const height = Math.max(450, maxColumnNodes * 28 + 30);
 
     function getPostCategories(post) {
-      return post.categories && post.categories.length > 0 ? post.categories : ['未分类'];
+      return post.categories && post.categories.length > 0 ? post.categories : ['未分類'];
     }
     function getPostTags(post) {
-      return post.tags && post.tags.length > 0 ? post.tags : ['无标签'];
+      return post.tags && post.tags.length > 0 ? post.tags : ['無標籤'];
     }
 
     // 计算节点的真实文章数

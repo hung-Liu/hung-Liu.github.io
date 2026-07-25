@@ -203,7 +203,7 @@
 
         navigator.clipboard.writeText(textToCopy).then(
           function () {
-            const successMsg = window.ABOUT_TRANSLATIONS.copied || '已复制到剪贴板！';
+            const successMsg = window.ABOUT_TRANSLATIONS.copied || '已複製到剪貼簿！';
             showToast(successMsg, true);
 
             // GSAP 弹性点按反馈
@@ -216,7 +216,7 @@
           },
           function (err) {
             console.error('Failed to copy: ', err);
-            const failMsg = window.ABOUT_TRANSLATIONS.copy_failed || '复制失败，请手动复制';
+            const failMsg = window.ABOUT_TRANSLATIONS.copy_failed || '複製失敗，請手動複製';
             showToast(failMsg, false);
           }
         );
