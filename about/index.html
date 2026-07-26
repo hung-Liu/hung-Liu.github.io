@@ -107,11 +107,11 @@
       <h3>Contact</h3>
       <div class="links-section">
         
-        <div class="link-item copy-btn" data-copy="meps10648@gmail.com">
+        <div class="link-item copy-btn" data-copy="meps106148@gmail.com">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-youxiang"></use>
           </svg>
-          <span>meps10648@gmail.com</span>
+          <span>meps106148@gmail.com</span>
         </div>
           
       </div> 
@@ -145,7 +145,59 @@
           <span>Discord</span>
         </a>
         
+        
+        <!-- 自我介紹文章卡片 -->
+
       </div>
+    
+    <a href="/2026/07/26/my-first-post/" class="about-intro-card">
+      <div class="intro-card-text">
+        <div class="intro-card-title">自我介紹</div>
+        <div class="intro-card-desc">self introduce</div>
+      </div>
+      <div class="intro-card-arrow">→</div>
+    </a>
+    
+
+    <style>
+      .about-intro-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        margin: 2rem auto 0;
+        max-width: 480px;
+        padding: 1rem 1.4rem;
+        border-radius: 12px;
+        background: var(--secondary-color);
+        border: 1px solid var(--shadow-color1);
+        box-shadow: 0 2px 8px var(--shadow-color2);
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .about-intro-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px var(--shadow-color1);
+      }
+      .intro-card-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--text-color);
+      }
+      .intro-card-desc {
+        font-size: 0.85rem;
+        color: var(--secondary-text-color);
+        margin-top: 0.2rem;
+      }
+      .intro-card-arrow {
+        font-size: 1.2rem;
+        color: var(--secondary-text-color);
+        transition: transform 0.25s ease;
+      }
+      .about-intro-card:hover .intro-card-arrow {
+        transform: translateX(4px);
+      }
+    </style>
     </div>
   </main>
 </div>
