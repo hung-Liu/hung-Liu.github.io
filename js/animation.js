@@ -261,6 +261,16 @@ document.addEventListener('DOMContentLoaded', function () {
         '-=0.3'
       );
     }
+    
+    // 5. 自我介紹卡片壓軸進場
+    const introCard = document.querySelector('.about-intro-card');
+    if (introCard) {
+      tl.fromTo(introCard,
+        { opacity: 0, y: 25, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power2.out' },
+        '-=0.2'
+      );
+    }
 
     // 6.2 信息胶囊卡片 Hover 磁性微交互 (Hover Micro-interactions)
     if (config.hover_effect) {
